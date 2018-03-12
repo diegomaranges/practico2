@@ -1,8 +1,15 @@
 #ifndef OPERACIONES_STRING_H
 #define OPERACIONES_STRING_H
 
+#include <string.h>
+#include <iostream>
 
-//cout << "* Imprimir por pantalla un texto                  *" << endl;
-//cout << "* Camparacion de cadena                           *" << endl;
+using namespace std;
+
+string console_print();
+//Imprimir por pantalla un texto
+
+bool compare_string(string string1, string string2);
+//Camparacion de cadena
 
 #endif // OPERACIONES_STRING_H
