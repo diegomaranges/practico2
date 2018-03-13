@@ -1,16 +1,17 @@
-#include <iostream>
-#include <string.h>
 #include "Operaciones_Binarias.h"
 #include "Operaciones_logicas.h"
 #include "Operaciones_Matenaticas.h"
 #include "Operaciones_preprocesador.h"
 #include "Operaciones_String.h"
 
+#define SHOW(var) std::cout << #var << ": " << (var) << std::endl
+
 using namespace std;
 
 void menu()
 {
     cout << "***************************************************" << endl;
+    cout << "* Selecciona una opcion y presiona enter:         *" << endl;
     cout << "* a - El cuadrado de un numero                    *" << endl;
     cout << "* b - La suma de dos numeros                      *" << endl;
     cout << "* c - El area de un circulo                       *" << endl;
@@ -30,7 +31,7 @@ char options()
     while(!(cin.get(option_in))) {
        cin.clear();
        cin.ignore(999,'\n');
-       cout<<"Invalid data type! Please enter 'option' again";
+       cout << "Invalid data type! Please enter 'option' again";
     }
     cin.ignore(999,'\n');
     return option_in;
@@ -73,12 +74,15 @@ int main()
             cin.ignore(999,'\n');
             break;
         case 'e':
-            void chain();
-            break;
-        /*case 'f':
-            cout << console_print() << endl;
+            cin>>str1;
+            cin>>str2;
+            chain(str1, str2);
             cin.ignore(999,'\n');
-            break;*/
+            break;
+        case 'f':
+            cout << console_print() << endl;
+//            cin.ignore(999,'\n');
+            break;
         case 'g':
             cin>>str1;
             cin>>str2;
@@ -86,17 +90,19 @@ int main()
             cin.ignore(999,'\n');
             break;
         case 'h':
-            cin>>number1;
-            cin>>number2;
-            cout << and_bin(number1, number2) << endl;
+            sub_opt();
+            break;
+        case 'i':
+            cin >> str1;
+            cin >> str2;
+            SHOW(str1);
+            SHOW(str2);
+            my_swap(str1, str2);
+            cout << str1 << "    " << str2 << endl;
+            SHOW(str1);
+            SHOW(str2);
             cin.ignore(999,'\n');
             break;
-        /*case 'i':
-            cin >> subopt;
-            cin >> suboption;
-            my_swap(subopt, suboption);
-            cout << subopt << "    " << suboption << endl;
-            break;*/
         case 'q':
             break;
         default:

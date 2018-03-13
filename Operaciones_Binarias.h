@@ -1,18 +1,15 @@
 #ifndef OPERACIONES_BINARIAS_H
 #define OPERACIONES_BINARIAS_H
 //Operaciones binarias
+
+#include <iostream>
+
+using namespace std;
+
 typedef long int lint;
 
-lint and_bin(lint one, lint two);
-//AND binario
-
-lint or_bin(lint one, lint two);
-//OR binario
-
-lint sleft(lint one);
-//Desplazamiento de 2 bits a la izquierda
-
-lint sright(lint one);
-// Desplazamiento de 2 bits a la derecha
+void sub_opt();
+// User mey determine if perform bainary and else perform bainary or else perform bainary shift right
+//and finally else shift left
 
 #endif // OPERACIONES_BINARIAS_H
