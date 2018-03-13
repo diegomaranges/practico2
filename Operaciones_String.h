@@ -3,15 +3,10 @@
 
 #include <string.h>
 #include <iostream>
-#include <random>
-#include <chrono>
 
 using namespace std;
 
-string console_print();
-//Imprimir por pantalla un texto
-
 bool compare_string(string string1, string string2);
-//Camparacion de cadena
+// compare two strings and return 1 if true or 0 if false
 
 #endif // OPERACIONES_STRING_H

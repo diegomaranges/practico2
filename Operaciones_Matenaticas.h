@@ -2,15 +2,15 @@
 #define OPERACIONES_MATENATICAS_H
 
 float cal_square(float num1);
-//El cuadrado de un numer
+//calculate and return square of number
 
 float cal_addition(float num1, float num2);
-//La suma de dos numeros
+//calculate and return addition of both
 
 float circle_area(float radius);
-//El area de un circulo
+//return the area of cicle
 
 float maximal(float num1, float num2);
-//El maximo de dos numeros
+//return the maximun of both
 
 #endif // OPERACIONES_MATENATICAS_H

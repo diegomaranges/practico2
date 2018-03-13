@@ -1,23 +1,23 @@
 #include "Operaciones_Binarias.h"
-lint and_bin(lint one, lint two)//AND binario
+lint and_bin(lint one, lint two)
 {
     return one & two;
 }
 
 
-lint or_bin(lint one, lint two)//OR binario
+lint or_bin(lint one, lint two)
 {
     return one | two;
 }
 
 
-lint sleft(lint one)//Desplazamiento de 2 bits a la izquierda
+lint sleft(lint one)
 {
     return one<<2;
 }
 
 
-lint sright(lint one)// Desplazamiento de 2 bits a la derecha
+lint sright(lint one)
 {
     return one>>2;
 }
@@ -34,37 +34,46 @@ void sub_opt()
     cout << "* c - Desplazamiento de 2 bits a la izquierda     *" << endl;
     cout << "* d - Desplazamiento de 2 bits a la derecha       *" << endl;
     cout << "***************************************************" << endl;
+    cout << "Opcion: ";
+
     while(!(cin.get(option))) {
        cin.clear();
        cin.ignore(999,'\n');
        cout << "Invalid data type! Please enter 'option' again";
     }
     cin.ignore(999,'\n');
+
     switch (option) {
     case 'a':
+        cout << "Ingrese el primer numero: ";
         cin >> one;
+        cout << "Ingrese el segundo numero: ";
         cin >> two;
-        cout << and_bin(one, two) << endl;
+        cout << "El resultado es: " << and_bin(one, two) << endl;
         cin.ignore(999,'\n');
         break;
     case 'b':
+        cout << "Ingrese el primer numero: ";
         cin >> one;
+        cout << "Ingrese el segundo numero: ";
         cin >> two;
-        cout << or_bin(one, two) << endl;
+        cout << "El resultado es: " << or_bin(one, two) << endl;
         cin.ignore(999,'\n');
         break;
     case 'c':
+        cout << "Ingrese el numero: ";
         cin >> one;
-        cout << sleft(one) << endl;
+        cout << "El resultado es: " << sleft(one) << endl;
         cin.ignore(999,'\n');
         break;
     case 'd':
+        cout << "Ingrese el numero: ";
         cin >> one;
-        cout << sright(one) << endl;
+        cout << "El resultado es: " << sright(one) << endl;
         cin.ignore(999,'\n');
         break;
     default:
-        cout << "no es una opcion valida" << endl;
+        cout << "No es una opcion valida" << endl;
         break;
     }
 }
