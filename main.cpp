@@ -93,9 +93,9 @@ int main()
             cout << "Ingrese la segunda oracion: ";
             cin>>str2;
             if(compare_string(str1, str2))
-                cout << "El resultado es: True" << endl;
+                cout << "El resultado es: Son iguales!!" << endl;
             else
-                cout << "El resultado es: False" << endl;
+                cout << "El resultado es: Son distintas :(" << endl;
             cin.ignore(999,'\n');
             break;
         case 'h':
