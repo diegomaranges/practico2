@@ -39,8 +39,8 @@ char options()
 int main()
 {
     char option = 'q';
-    float number1 = 0;
-    float number2 = 0;
+    double number1 = 0;
+    double number2 = 0;
     string str1 = "";
     string str2 = "";
     do

@@ -1,25 +1,31 @@
 #include "Operaciones_Binarias.h"
+
+#define AND(a, b) one & two
+#define OR(a, b) one | two
+#define SL(a) a<<2
+#define SR(a) a>>2
+
 lint and_bin(lint one, lint two)
 {
-    return one & two;
+    return AND(one, two);
 }
 
 
 lint or_bin(lint one, lint two)
 {
-    return one | two;
+    return OR(one, two);
 }
 
 
 lint sleft(lint one)
 {
-    return one<<2;
+    return SL(one);
 }
 
 
 lint sright(lint one)
 {
-    return one>>2;
+    return SR(one);
 }
 
 void sub_opt()
