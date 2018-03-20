@@ -3,6 +3,7 @@
 #include "Operaciones_Matenaticas.h"
 #include "Operaciones_preprocesador.h"
 #include "Operaciones_String.h"
+#include "Print_Sizeof.h"
 
 using namespace std;
 
@@ -43,6 +44,7 @@ int main()
     double number2 = 0;
     string str1 = "";
     string str2 = "";
+    int myarray[40];
     do
     {
         menu();
@@ -120,6 +122,7 @@ int main()
             cout << "No es una opcion valida" << endl;
             break;
         }
+        Print_Sizeof();
     } while(option != 'q');
     return 0;
 }

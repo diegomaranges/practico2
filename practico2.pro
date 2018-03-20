@@ -9,7 +9,8 @@ SOURCES += main.cpp \
     Operaciones_preprocesador.cpp \
     Operaciones_Binarias.cpp \
     Operaciones_logicas.cpp \
-    Utils.cpp
+    Utils.cpp \
+    Print_Sizeof.cpp
 
 HEADERS += \
     Operaciones_Matenaticas.h \
@@ -17,4 +18,5 @@ HEADERS += \
     Operaciones_preprocesador.h \
     Operaciones_Binarias.h \
     Operaciones_logicas.h \
-    Utils.h
+    Utils.h \
+    Print_Sizeof.h
