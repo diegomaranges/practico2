@@ -4,6 +4,7 @@
 #include "Operaciones_preprocesador.h"
 #include "Operaciones_String.h"
 #include "Print_Sizeof.h"
+#include "Array_Stack.h"
 
 using namespace std;
 
@@ -20,6 +21,11 @@ void menu()
     cout << "* g - Camparacion de cadena                       *" << endl;
     cout << "* h - Operaciones binarias                        *" << endl;
     cout << "* i - Operaciones logicas                         *" << endl;
+    cout << "* j - Editar array de enteros                     *" << endl;
+    cout << "* k - Imprimir el valor maximo de las variables   *" << endl;
+    cout << "* l - Imprimir el valor minimo de las variables   *" << endl;
+    cout << "* m - Imprimir la magnitud de tipos de variables  *" << endl;
+    cout << "* n - Imprimir a,b,c                              *" << endl;
     cout << "* q - Salir                                       *" << endl;
     cout << "***************************************************" << endl;
     cout << "Opcion: ";
@@ -44,7 +50,6 @@ int main()
     double number2 = 0;
     string str1 = "";
     string str2 = "";
-    int myarray[40];
     do
     {
         menu();
@@ -115,6 +120,21 @@ int main()
             SHOW(str2);
             cin.ignore(999,'\n');
             break;
+        case 'j':
+            Array_Stack();
+            break;
+        case 'k':
+            Print_Sizeof(option);
+            break;
+        case 'l':
+            Print_Sizeof(option);
+            break;
+        case 'm':
+            Print_Sizeof(option);
+            break;
+        case 'n':
+            Print_Sizeof(option);
+            break;
         case 'q':
             cout << "\t\tNos vemos!!!" << endl;
             break;
@@ -122,7 +142,6 @@ int main()
             cout << "No es una opcion valida" << endl;
             break;
         }
-        Print_Sizeof();
     } while(option != 'q');
     return 0;
 }
