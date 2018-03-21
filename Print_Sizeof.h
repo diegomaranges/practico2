@@ -7,6 +7,6 @@
 
 using namespace std;
 
-void Print_Sizeof();
+void Print_Sizeof(char option);
 
 #endif // PRINT_SIZEOF_H

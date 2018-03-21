@@ -10,7 +10,8 @@ SOURCES += main.cpp \
     Operaciones_Binarias.cpp \
     Operaciones_logicas.cpp \
     Utils.cpp \
-    Print_Sizeof.cpp
+    Print_Sizeof.cpp \
+    Array_Stack.cpp
 
 HEADERS += \
     Operaciones_Matenaticas.h \
@@ -19,4 +20,6 @@ HEADERS += \
     Operaciones_Binarias.h \
     Operaciones_logicas.h \
     Utils.h \
-    Print_Sizeof.h
+    Print_Sizeof.h \
+    Array_Stack.h \
+    constants.h
