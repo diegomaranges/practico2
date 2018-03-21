@@ -1,6 +1,8 @@
 #ifndef OPERACIONES_MATENATICAS_H
 #define OPERACIONES_MATENATICAS_H
 
+#include "constants.h"
+
 double cal_square(double num1);
 //calculate and return square of number
 

@@ -4,6 +4,8 @@
 
 #include <iostream>
 
+#include "constants.h"
+
 using namespace std;
 
 typedef long int lint;

@@ -5,8 +5,7 @@
 #include <random>
 #include <chrono>
 
-#define SHOW(var) std::cout << #var << ": " << (var) << std::endl
-#define concatenate(var1, var2) std::cout << #var1 << #var2 << std::endl
+#include "constants.h"
 
 using namespace std;
 
