@@ -45,6 +45,9 @@ char options()
 
 int main()
 {
+    int length = 5;
+    int myarray[length] = { }; // if assing { 10, 20, 30 } initialize to three first elements and
+                               // eny left out with 0.
     char option = 'q';
     double number1 = 0;
     double number2 = 0;
@@ -121,7 +124,7 @@ int main()
             cin.ignore(999,'\n');
             break;
         case 'j':
-            Array_Stack();
+            Array_Stack(myarray, length);
             break;
         case 'k':
             Print_Sizeof(option);

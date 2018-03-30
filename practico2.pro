@@ -21,5 +21,4 @@ HEADERS += \
     Operaciones_logicas.h \
     Utils.h \
     Print_Sizeof.h \
-    Array_Stack.h \
-    constants.h
+    Array_Stack.h

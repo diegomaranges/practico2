@@ -1,5 +1,13 @@
 #include "Operaciones_preprocesador.h"
 
+#define concatenate(var1, var2) std::cout << #var1 << #var2 << std::endl
+
+#define result1 "La felicidad no se consigue sentandose a esperarla."
+#define result2 "Un hombre que nunca cometio errores, nunca hizo nada."
+#define result3 "No es mas limpio el que mas limpia, sino el que menos ensucia."
+#define result4 "Trata de dejar a este mundo en mejores condiciones de como lo encontraste."
+#define result5 "Una sonrisa es la llave secreta que abre muchos corazones."
+
 string console_print()
 {
     string final_str = "";

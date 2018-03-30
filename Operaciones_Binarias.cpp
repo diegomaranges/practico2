@@ -1,5 +1,10 @@
 #include "Operaciones_Binarias.h"
 
+#define AND(a, b) one & two
+#define OR(a, b) one | two
+#define SL(a) a<<2
+#define SR(a) a>>2
+
 lint and_bin(lint one, lint two)
 {
     return AND(one, two);

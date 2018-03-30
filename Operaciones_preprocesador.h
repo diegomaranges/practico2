@@ -5,7 +5,7 @@
 #include <random>
 #include <chrono>
 
-#include "constants.h"
+#define SHOW(var) std::cout << #var << ": " << (var) << std::endl
 
 using namespace std;
 

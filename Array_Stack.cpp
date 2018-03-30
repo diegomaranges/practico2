@@ -1,9 +1,8 @@
 #include "Array_Stack.h"
 
-int myarray[5];
 int sector_array = 0;
 
-void Array_Stack()
+void Array_Stack(int *myarray, int length)
 {
     int one;
     char option;
@@ -26,7 +25,7 @@ void Array_Stack()
         cout << "ingrese el numero a agregar al array: ";
         cin >> one;
         myarray[sector_array] = one;
-        sector_array = (sector_array + 1)%5;
+        sector_array = (sector_array + 1)%length;
         cin.ignore(999,'\n');
         break;
     case 'b':

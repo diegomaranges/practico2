@@ -3,10 +3,8 @@
 
 #include <iostream>
 
-#include "constants.h"
-
 using namespace std;
 
-void Array_Stack();
+void Array_Stack(int *myarray, int length);
 
 #endif // ARRAY_STACK_H
