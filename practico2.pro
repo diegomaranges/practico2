@@ -11,7 +11,8 @@ SOURCES += main.cpp \
     Operaciones_logicas.cpp \
     Utils.cpp \
     Print_Sizeof.cpp \
-    Array_Stack.cpp
+    Array_Stack.cpp \
+    LinkedList.cpp
 
 HEADERS += \
     Operaciones_Matenaticas.h \
@@ -21,4 +22,5 @@ HEADERS += \
     Operaciones_logicas.h \
     Utils.h \
     Print_Sizeof.h \
-    Array_Stack.h
+    Array_Stack.h \
+    LinkedList.h
