@@ -1,6 +1,24 @@
 #include "LinkedList.h"
 
-bool elemt_valid(int elem)
+Node::Node() {
+    next = NULL;
+    previous = NULL;
+}
+
+Node::Node(int vle, Node *nxt, Node *prvs) {
+    value = vle;
+    next = nxt;
+    previous = prvs;
+}
+
+LinkedList::LinkedList()
+{
+    head = NULL;
+    tail = NULL;
+}
+
+
+bool LinkedList::elemt_valid(int elem)
 {
     for(int i = 2; i <= elem / 2; ++i)
     {
@@ -12,75 +30,68 @@ bool elemt_valid(int elem)
     return false;
 }
 
-LinkedList::LinkedList()
-{
-    length = 0;
-    head = nullptr;
-    tail = nullptr;
-}
-
-void LinkedList::AddElement(int elem)
+bool LinkedList::AddElement(int elem)
 {
     if (elemt_valid(abs(elem)))
     {
-        node *auxiliary = nullptr;
+        Node *element;
+        element = new Node(elem, NULL, NULL);
+        cout << head << endl;
+        cout << tail << endl;
 
-        node *element = new node;
-        element->value = elem;
-        element->next = nullptr;
-        element->previous = nullptr;
-
-        if(length == 0) {
+        if(element == NULL)
+        {
+            return false;
+        }
+        if(head == NULL) {
+            cout << "hola1" << endl;
             head = element;
             tail = element;
-        } else if (head == tail) {
-            tail = element;
-            tail->previous = head;
-            head->next = tail;
-        } else {
-            auxiliary = tail;
-            tail->next = element;
-            tail = element;
-            tail->previous = auxiliary;
+            return true;
         }
-        ++length;
+        cout << "hola3" << endl;
+        tail->next = element;
+        element->previous = tail;
+        tail = element;
+        return true;
     } else {
         cout << "el numero ingresado es primo y no puedo agregarlo" << endl;
+        return true;
     }
 }
 
 void LinkedList::PrintList()
 {
-    node * auxiliary = head;
-    for (unsigned int i = 0; i < length; ++i) {
+    Node * auxiliary = head;
+    while (auxiliary != tail) {
         cout << auxiliary->value << ", ";
         auxiliary = auxiliary->next;
     }
+    cout << auxiliary->value << endl;
 }
 
 LinkedList::~LinkedList()
 {
-    node *auxiliaryone = nullptr;
-    node *auxiliarytwo = nullptr;
+    Node *auxiliaryone;
+    Node *auxiliarytwo;
 
-    while (head != nullptr && tail != nullptr) {
+    while (head != NULL && tail != NULL) {
         if (head == tail) {
-            delete[] head;
+            delete head;
             head = nullptr;
             tail = nullptr;
         } else if (head->next == tail) {
-            delete[] head;
+            delete head;
             head = nullptr;
-            delete[] tail;
+            delete tail;
             tail = nullptr;
         } else {
             auxiliaryone = head->next;
             auxiliarytwo = tail->previous;
-            delete[] head;
+            delete head;
             head = auxiliaryone;
-            delete[] tail;
+            delete tail;
             tail = auxiliarytwo;
         }
     }
-    length = 0;
 }

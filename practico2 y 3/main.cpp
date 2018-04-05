@@ -145,19 +145,20 @@ int main()
         case 'l':
             cout << "Ingrese el elemento: ";
             cin>>number1;
-            list->AddElement(number1);
+            if (!list->AddElement(number1))
+            {
+                cout << "error al recibir el numero" << endl;
+            }
             break;
 
         case 'm':
             list->PrintList();
             break;
 
-        /*case 'n':
+        case 'n':
             list->~LinkedList();
-            delete[] list;
-            list = nullptr;
-          list();
-            break;*/
+            //list();
+            break;
 
         case 'q':
             cout << "\t\tNos vemos!!!" << endl;
@@ -168,8 +169,5 @@ int main()
             break;
         }
     } while(option != 'q');
-    list->~LinkedList();
-    delete[] list;
-    list = nullptr;
     return 0;
 }
