@@ -11,7 +11,7 @@ using namespace std;
 #define DIRECTION "C:\\Users\\Diego\\Documents\\practico2\\CommandLineApp\\CommandLineApp\\words.txt"
 
 
-int passToCode(char mychar)
+string passToCode(char mychar)
 {
 	int value = (int)mychar;
 	int A = 0;
@@ -23,11 +23,11 @@ int passToCode(char mychar)
 
 	if (value == 0x20)
 	{
-		return 0;
+		return "0";
 	}
 	else if (0x21 <= value && value <= 0x40 || 0x5b <= value && value <= 0x60 || value == 0x7e)
 	{
-		return 1;
+		return "1";
 	}
 	else 
 	{
@@ -39,7 +39,6 @@ int passToCode(char mychar)
 		{
 			value -= 0x60;
 		}
-		cout << value << ", ";
 		E = value & 1;
 		D = (value & 2) >> 1;
 		C = (value & 4) >> 2;
@@ -56,13 +55,12 @@ int passToCode(char mychar)
 
 		returnV |= ((A & !B & C) | (A & B & !C & !D) | (A & B *!C & !E)) << 3;
 	}
-	cout << returnV << endl;
-	return returnV;
+	return to_string(returnV);
 };
 
 WordsOpt::WordsOpt()
 {
-	int key = 0;
+	string key = "";
 	string line;
 	ifstream myfile(DIRECTION);
 	if (myfile.is_open())
@@ -71,31 +69,32 @@ WordsOpt::WordsOpt()
 		{
 			for (int i = 0; i != line.size(); ++i)
 			{
-				key = key * 10 + passToCode(line[i]);
+				key = key + passToCode(line[i]);
 			}
-			mult.insert(pair<const int, string>(key, line));
-			cout << line << endl;
-			key = 0;
+			key += "\0";
+			mult.insert(pair<string, string>(key, line));
+			key = "";
 		}
 		myfile.close();
 		cout << "Elements in m: " << endl;
-		for (multimap<const int, string>::iterator it = mult.begin(); it != mult.end(); ++it)
+		for (multimap<string, string>::iterator it = mult.begin(); it != mult.end(); ++it)
 			cout << "  [" << (*it).first << ", " << (*it).second << "]" << endl;
 	}
 	else
 		cout << "Unable to open file";
 };
 
-void WordsOpt::serchComand(int command)
+void WordsOpt::serchComand(string command)
 {
-	for (multimap<const int, string>::iterator it = mult.begin(); it != mult.end(); ++it)
+	cout << "estos son los elementos que coinciden con el comando" << endl;
+	for (multimap<string, string>::iterator it = mult.begin(); it != mult.end(); ++it)
 	{
-		if ((*it).first == command)
+		if (!(*it).first.compare(command))
 		{
-			cout << (*it).second << ", ";
+			cout << "{ " << (*it).second << " }" << " ; ";
 		}
 	}
-	cout << "estos son los elementos que coinciden con el comando" << endl;
+	cout << "\n";
 };
 
 

@@ -9,10 +9,11 @@ using namespace std;
 
 class WordsOpt
 {
+private:
+	multimap<string, string>mult;
 public:
-	multimap<const int, string>mult;
 	WordsOpt();
-	void serchComand(int);
+	void serchComand(string);
 	~WordsOpt();
 };
 
