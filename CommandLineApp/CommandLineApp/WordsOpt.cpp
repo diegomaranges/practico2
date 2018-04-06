@@ -87,14 +87,12 @@ WordsOpt::WordsOpt()
 void WordsOpt::serchComand(string command)
 {
 	cout << "estos son los elementos que coinciden con el comando" << endl;
-	for (multimap<string, string>::iterator it = mult.begin(); it != mult.end(); ++it)
-	{
-		if (!(*it).first.compare(command))
-		{
-			cout << "{ " << (*it).second << " }" << " ; ";
-		}
+	multimap<string, string>::iterator it, itlow, itup;
+	itlow = mult.lower_bound(command);  // itlow points to b
+	itup = mult.upper_bound(command);   // itup points to e (not d)
+	for (it = itlow; it != itup; ++it) {
+		std::cout << (*it).first << " => " << (*it).second << '\n';
 	}
-	cout << "\n";
 };
 
 
