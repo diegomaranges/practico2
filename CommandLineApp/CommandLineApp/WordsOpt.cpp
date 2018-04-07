@@ -1,17 +1,16 @@
 #include "stdafx.h"
 #include "WordsOpt.h"
 
-/*#include <iostream>
+#include <iostream>
 #include <fstream>
 #include <string>
-#include <map>*/
 
 using namespace std;
 
 #define DIRECTION "C:\\Users\\Diego\\Documents\\practico2\\CommandLineApp\\CommandLineApp\\words.txt"
 
 
-string passToCode(char mychar)
+string WordsOpt::charToCode(char mychar)
 {
 	int value = (int)mychar;
 	int A = 0;
@@ -58,6 +57,16 @@ string passToCode(char mychar)
 	return to_string(returnV);
 };
 
+string WordsOpt::stringToChar(string word, size_t length)
+{
+	string key = "";
+	for (int i = 0; i != length; ++i)
+	{
+		key = key + charToCode(word[i]);
+	}
+	return key;
+}
+
 WordsOpt::WordsOpt()
 {
 	string key = "";
@@ -67,11 +76,7 @@ WordsOpt::WordsOpt()
 	{
 		while (getline(myfile, line))
 		{
-			for (int i = 0; i != line.size(); ++i)
-			{
-				key = key + passToCode(line[i]);
-			}
-			key += "\0";
+			key = stringToChar(line, line.size());
 			mult.insert(pair<string, string>(key, line));
 			key = "";
 		}
