@@ -45,6 +45,15 @@ int MenuOpt::optionsFun(std::string comment)
 	return a;
 }
 
+string MenuOpt::optionsFunct(std::string comment)
+{
+	string a;
+	cout << comment;
+	cin >> a;
+	cin.ignore(999, '\n');
+	return a;
+}
+
 MenuOpt::MenuOpt()
 {
 }

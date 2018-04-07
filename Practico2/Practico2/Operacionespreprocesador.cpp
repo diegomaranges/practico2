@@ -1,6 +1,9 @@
 #include "stdafx.h"
 #include "Operacionespreprocesador.h"
 
+#include <random>
+#include <chrono>
+
 #define concatenate(var1, var2) std::cout << #var1 << #var2 << std::endl
 
 #define result1 "La felicidad no se consigue sentandose a esperarla."
@@ -9,9 +12,8 @@
 #define result4 "Trata de dejar a este mundo en mejores condiciones de como lo encontraste."
 #define result5 "Una sonrisa es la llave secreta que abre muchos corazones."
 
-string console_print()
+void console_print()
 {
-	string final_str = "";
 	unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
 	//random_device rd; obtain a random number from hardware
 	mt19937 eng(seed); // seed the generator   {eng(rd())}
@@ -19,28 +21,25 @@ string console_print()
 
 	switch (distr(eng)) {
 	case 0:
-		final_str = result1;
+		cout << result1 << endl;
 		break;
 	case 1:
-		final_str = result2;
+		cout << result2 << endl;
 		break;
 	case 2:
-		final_str = result3;
+		cout << result3 << endl;
 		break;
 	case 3:
-		final_str = result4;
+		cout << result4 << endl;
 		break;
 	default:
-		final_str = result5;
+		cout << result5 << endl;
 		break;
 	}
-	return final_str;
 }
 
 void chain(string str1, string str2)
 {
-	//SHOW(str1);
-	//SHOW(str2);
 	concatenate(str1, str2);
 }
 

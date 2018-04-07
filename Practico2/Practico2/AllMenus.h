@@ -3,6 +3,32 @@
 
 using namespace std;
 
+__callback void OptMath() {
+	cout << "***************************************************" << endl;
+	cout << "* Selecciona una opcion y presiona enter:         *" << endl;
+	cout << "* a - El cuadrado de un numero                    *" << endl;
+	cout << "* b - La suma de dos numeros                      *" << endl;
+	cout << "* c - El area de un circulo                       *" << endl;
+	cout << "* d - El maximo de dos numeros                    *" << endl;
+	cout << "***************************************************" << endl;
+	cout << "Opcion: ";
+}
+
+__callback void Optpreproces() {
+	cout << "***************************************************" << endl;
+	cout << "* a - Concatenacion de nombre de variables        *" << endl;
+	cout << "* b - Imprimir por pantalla un texto              *" << endl;
+	cout << "***************************************************" << endl;
+	cout << "Opcion: ";
+}
+
+__callback void OptStr() {
+	cout << "***************************************************" << endl;
+	cout << "* a - Camparacion de cadena                       *" << endl;
+	cout << "***************************************************" << endl;
+	cout << "Opcion: ";
+}
+
 __callback void OptBin() {
 	cout << "***************************************************" << endl;
 	cout << "* Selecciona una opcion y presiona enter:         *" << endl;
@@ -17,37 +43,7 @@ __callback void OptBin() {
 
 __callback void OptLgl() {
 	cout << "***************************************************" << endl;
-	cout << "* a - Camparacion de cadena                       *" << endl;
-	cout << "* q - volver                                      *" << endl;
-	cout << "***************************************************" << endl;
-	cout << "Opcion: ";
-}
-
-__callback void OptMath() {
-	cout << "***************************************************" << endl;
-	cout << "* Selecciona una opcion y presiona enter:         *" << endl;
-	cout << "* a - El cuadrado de un numero                    *" << endl;
-	cout << "* b - La suma de dos numeros                      *" << endl;
-	cout << "* c - El area de un circulo                       *" << endl;
-	cout << "* d - El maximo de dos numeros                    *" << endl;
-	cout << "* q - volver                                      *" << endl;
-	cout << "***************************************************" << endl;
-	cout << "Opcion: ";
-}
-
-__callback void Optpreproces() {
-	cout << "***************************************************" << endl;
-	cout << "* a - Concatenacion de nombre de variables        *" << endl;
-	cout << "* b - Imprimir por pantalla un texto              *" << endl;
-	cout << "* q - volver                                      *" << endl;
-	cout << "***************************************************" << endl;
-	cout << "Opcion: ";
-}
-
-__callback void OptStr() {
-	cout << "***************************************************" << endl;
-	cout << "* a - Camparacion de cadena                       *" << endl;
-	cout << "* q - volver                                      *" << endl;
+	cout << "* a - intercambio de variables                    *" << endl;
 	cout << "***************************************************" << endl;
 	cout << "Opcion: ";
 }

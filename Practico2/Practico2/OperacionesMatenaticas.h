@@ -12,3 +12,4 @@ double circle_area(double radius);
 double maximal(double num1, double num2);
 //return the maximun of both
 
+void switchOM(char);

@@ -1,12 +1,7 @@
 #pragma once
 
 #include <iostream>
-#include <algorithm>
 
-using namespace std;
-
-template <typename T>
-
-void my_swap(T &n1, T &n2);
+void my_swap(std::string n1, std::string n2);
 // swaps n1 and n2
 
