@@ -77,6 +77,8 @@ In this directory implement array in *stack memory* and function to print max  a
 > 
 > c = A or 65 or 0x41
 
+*a* and *b* have equal value in hexadecimal but with *a* is signed int the first bit is used by designed sined.
+
 ## Practico4 ##
 In this directory implement function `swap()` that take two elements of the same type and swap value, and implemente `class LinkedList` its one *double linked list*.
 
