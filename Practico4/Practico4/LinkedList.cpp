@@ -5,7 +5,7 @@
 
 using namespace std;
 
-LinkedList::LinkedList()
+LinkedList::LinkedList() // Initialize values
 {
 	length = 0;
 	head = nullptr;
@@ -32,20 +32,21 @@ bool LinkedList::addToElement(int elem)
 		Node *element;
 		element = new Node(elem);
 
-		if (element == NULL)
+		if (element == NULL) // If dont have more memory in heap. 
 		{
 			return false;
 		}
 		if (length == 0) {
 			head = element;
 			tail = element;
-			++length;
+			++length; // Increment length.
 			return true;
 		}
+        // If exist at least one element this cant be affected to head.
 		tail->setNextElem(element);
 		element->setPrevElem(tail);
 		tail = element;
-		++length;
+		++length; // Increment length.
 		return true;
 	}
 	else {
@@ -68,6 +69,7 @@ void LinkedList::pintList()
 LinkedList::~LinkedList()
 {
 	Node *element;
+    // I have do free memory of nodes.
 	for (unsigned int i = 0; i < length; ++i)
 	{
 		element = head->getNextElem();

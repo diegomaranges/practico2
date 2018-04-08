@@ -7,6 +7,7 @@ using namespace std;
 
 void MenuOpt::menu()
 {
+    //Default menu in this proyect.
 	cout << "***************************************************" << endl;
 	cout << "* Selecciona una opcion y presiona enter:         *" << endl;
 	cout << "* a - Swap referencia                             *" << endl;
