@@ -47,7 +47,7 @@ string WordsOpt::charToCode(char mychar)
 		B = (value & 8) >> 3;
 		A = (value & 16) >> 4;
 
-        //with only need 4 bits for represent one number from 0 to 9, create true table and run McClusqui algorithm.
+        //with only need 4 bits for represent one number from 0 to 9, create true table and run McCluskey algorithm.
 		returnV = (!A & !B & C & !D) | (!A & !B & C & !E) | (!A & B & !C & D) | (!A & C & !D & !E)
 			| (A & !B & D & E) | (A & !C & !D) | (A & !C & !E); // First bit
 
