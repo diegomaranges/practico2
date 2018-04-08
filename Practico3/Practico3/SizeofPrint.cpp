@@ -55,7 +55,8 @@ void Print_Sizeof(char option)
 			<< "long long:\t" << sizeof(long long) << " bytes" << std::endl // C++11, may not be supported by your compiler
 			<< "float:\t\t" << sizeof(float) << " bytes" << std::endl
 			<< "double:\t\t" << sizeof(double) << " bytes" << std::endl
-			<< "long double:\t" << sizeof(long double) << " bytes" << std::endl;
+			<< "long double:\t" << sizeof(long double) << " bytes" << std::endl
+            << "size_t:\t\t" << sizeof(size_t) << " bytes" << std::endl;
 		break;
 	case 'd':
 		std::cout << "int a = 0xFFFFFFFF, unsigned int b = 0xFFFFFFFF:" << std::endl

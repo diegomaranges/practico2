@@ -1,4 +1,6 @@
 # Introduction #
+Proyect done by Diego Maranges, March - April 2018.
+
 This project is by acquire multiples knowledge about c++.
 Each directory consist in diferent types of element belongs c++.
 
@@ -22,6 +24,58 @@ In this directory implement some basic operations and the use of **Macros** (Def
 7. **OperacionesPreprocesador.h and OperacionesPreprocesador.cpp:** `console_print()` this function print [literal](https://en.wikipedia.org/wiki/Literal_(computer_programming) "Literal(computer_programming)") from comsole. `chain()` take two value and concatenate variable name for both value.
 
 8. **OperacionesString.h and OperacionesString.cpp:** `compare_string()` take two strings and return true if are equal and false otherwise
+
+## Practico3 ##
+In this directory implement array in *stack memory* and function to print max  and min value of direferents types, or print sizeof that they occupies in memory.
+
+1. **Practico3.cpp:** This file contain main function, where print menu, analyze entry values, call to diferent functions and initialize array in stak.
+
+2. **MenuOpt.h, MenuOpt.cpp and AllMenu.cpp:** this files they fulfill the same function that in *practico2*.
+
+3. **ArrayStack.h and ArrayStack.cpp:** this files contain function `Array_Stack()` that fulfill two functions, update value of array using one statik value by mark current value or print by console the array.
+
+4. **SizeofPrint.h and SizeofPrint.cpp:** this files contain function `Print_sizeof()` that fulfill four functions but all consist of print something by console using library **limits**. First possible maximal value of different types, second possible minimal value of different types, third sizeof value of differents types and fourth three values of diferent shapes(`int a = 0xFFFFFFFF`,`unsigned int b = 0xFFFFFFFF` and `char c = 65`).
+
+### If your architecture It's 32 bits then return: ###
+> maximal value:
+> 
+> `short`: 32767 - `int`: 2147483647 - `streamsize`: 9223372036854775807 -
+> `size_t`: 4294967295 - `float`: 3.40282e+38 - `double`: 1.79769e+308.
+>
+>Minimun value:
+>
+> `short`: -32768 - `int`: -2147483648 - `streamsize`: -9223372036854775808 -
+> `size_t`: 0 - `float`: 1.17549e-38 - `double`: 2.22507e-308.
+> 
+> Sizeof:
+> 
+> `bool` = `char` = 1 - `wchar_t` = `char16_t` = `short` = 2 - `char32_t` =
+> `int` = `long` = `float` = `size_t` = 4 - `long long` = `double` =
+> `long double` = 8
+
+### If your architecture It's 64 bits then return: ###
+> maximal value:
+> 
+> `short`: 32767 - `int`: 2147483647 - `streamsize`: 9223372036854775807 -
+> `size_t`: 18446744073709557675 - `float`: 3.40282e+38 - `double`: 1.79769e+308.
+>
+>Minimun value:
+>
+> `short`: -32768 - `int`: -2147483648 - `streamsize`: -9223372036854775808 -
+> `size_t`: 0 - `float`: 1.17549e-38 - `double`: 2.22507e-308.
+> 
+> Sizeof:
+> 
+> `bool` = `char` = 1 - `wchar_t` = `char16_t` = `short` = 2 - `char32_t` =
+> `int` = `long` = `float` = 4 - `long long` = `double` = `long double` = 
+> `size_t` = 8
+
+### And value of a, b, c in both architecture: ###
+> a = -1 or 0xFFFFFFFF
+> 
+> b = 4294967295 or 0xFFFFFFF
+> 
+> c = A or 65 or 0x41
 
 ## Bibliography ##
 1. [stackoverflow](https://es.stackoverflow.com/ "stackoverflow").
