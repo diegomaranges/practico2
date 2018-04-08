@@ -8,9 +8,9 @@ using namespace std;
 
 void Array_Stack(int *myarray, int length, char option)
 {
-	static int sector_array = 0;
+	static int sector_array = 0; // Represent actualy possition of array.
 	MenuOpt menu;
-	int one;
+	int one; // Take value insert by user.
 	switch (option) {
 	case 'a':
 		one = menu.optionsFun("ingrese el numero a agregar al array: ");

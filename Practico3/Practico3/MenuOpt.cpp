@@ -8,6 +8,7 @@ using namespace std;
 void MenuOpt::menu(callback_function funct)
 {
 	if (funct == nullptr) {
+        //Default menu in this proyect.
 		cout << "***************************************************" << endl;
 		cout << "* Selecciona una opcion y presiona enter:         *" << endl;
 		cout << "* a - Editar array                                *" << endl;
