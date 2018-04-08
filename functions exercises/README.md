@@ -101,11 +101,19 @@ a- Return "int", due to integer point promotions.
 Write a sort() function that takes a pointer of ints and its size, and sort them incrementally
 
 ### answer8 ###
+	#include <stdlib.h> 
+	__callback int mymax(const void * a, const void * b) {
+	return *(int*)a - *(int*)b;
+	}
+	int *shor(int *a, int length) {
+	qsort(a, length, sizeof(int), mymax
+	}
 
 ## ask9 ##
-Create a function that takes an argument by value as a const ; then try to change that argument in the function body.
+Create a function that takes an argument by value as a const; then try to change that argument in the function body.
 
 ### answer9 ###
+	fun()
 
 ## ask10 ##
 Define a function that takes a double argument and returns an int . Create and initialize a pointer to this function, and call the function through your pointer.
