@@ -77,6 +77,17 @@ In this directory implement array in *stack memory* and function to print max  a
 > 
 > c = A or 65 or 0x41
 
+## Practico4 ##
+In this directory implement function `swap()` that take two elements of the same type and swap value, and implemente `class LinkedList` its one *double linked list*.
+
+1. **Practico3.cpp:** This file contain main function, where print menu, analyze entry values, call to diferent functions and contain the function `swap()` which use [**templates**](http://www.cplusplus.com/doc/oldtutorial/templates/ "cplusplus templates").
+
+2. **MenuOpt.h and MenuOpt.cpp:** This files they fulfill the same function that in *practico2*.
+
+3. **LinkedList.h and LinkList.cpp:** This files contain a `class LinkedList` that use various public functions, `addToElement()`(take integer and adding if it is not a prime) and `pintList()`(not take elements for parameter and print by console the linked list). Also contain one function private `elemt_valid()`(take one integer and return true if its not a prime number and false otherwise) and  three private variables, `length` (that count the quantity elements in the list), `head`(that contain pointer to first element of list) and `tail`(that contain pointer to last element of list).
+
+4. **Node.h and Node.cpp:** This files contain a `class LinkedList` that use various public functions, `getElem()`, `getNextElem()`, `getPrevElem()`(the three function retorn value of node), `setNextElem()`, `setPrevElem()`(the two function take Node * and update value of node characteristics, but not node value). Also contain the three private value and variables of node, `element`(value of node, in this case integer), `nextt`(pointer to next node), and `prev`(pointer to previus node).
+
 ## Bibliography ##
 1. [stackoverflow](https://es.stackoverflow.com/ "stackoverflow").
 2. [cplusplus](http://www.cplusplus.com/doc/tutorial/ "cplusplus tutorial").
