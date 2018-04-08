@@ -7,13 +7,13 @@ using namespace std;
 class WordsOpt
 {
 private:
-	multimap<string, string>mult;
-	string charToCode(char);
+	multimap<string, string>mult; //Multimap
+	string charToCode(char); //Pass one char to value from 0 to 9
 protected:
-	string stringToChar(string, size_t);
+	string stringToChar(string, size_t); // Function that decompose string in char and call charToCode.
 public:
-	WordsOpt();
-	void serchComand(string);
-	~WordsOpt();
+	WordsOpt(); // Constructor (load file).
+	void serchComand(string); // Go through multimap and return for console all words with string equal to command key.
+	~WordsOpt(); // Destructor.
 };
 
