@@ -1,49 +1,50 @@
 #pragma once
 #include<iostream>
-
-using namespace std;
+//This header contain multiple definitions of options by users.
+//It header can be called by one file cpp because otherwise will give error
+//since will have multiple definitions by each functions.
 
 __callback void OptMath() {
-	cout << "***************************************************" << endl;
-	cout << "* Selecciona una opcion y presiona enter:         *" << endl;
-	cout << "* a - El cuadrado de un numero                    *" << endl;
-	cout << "* b - La suma de dos numeros                      *" << endl;
-	cout << "* c - El area de un circulo                       *" << endl;
-	cout << "* d - El maximo de dos numeros                    *" << endl;
-	cout << "***************************************************" << endl;
-	cout << "Opcion: ";
+	std::cout << "***************************************************" << std::endl;
+	std::cout << "* Selecciona una opcion y presiona enter:         *" << std::endl;
+	std::cout << "* a - El cuadrado de un numero                    *" << std::endl;
+	std::cout << "* b - La suma de dos numeros                      *" << std::endl;
+	std::cout << "* c - El area de un circulo                       *" << std::endl;
+	std::cout << "* d - El maximo de dos numeros                    *" << std::endl;
+	std::cout << "***************************************************" << std::endl;
+	std::cout << "Opcion: ";
 }
 
 __callback void Optpreproces() {
-	cout << "***************************************************" << endl;
-	cout << "* a - Concatenacion de nombre de variables        *" << endl;
-	cout << "* b - Imprimir por pantalla un texto              *" << endl;
-	cout << "***************************************************" << endl;
-	cout << "Opcion: ";
+	std::cout << "***************************************************" << std::endl;
+	std::cout << "* a - Concatenacion de nombre de variables        *" << std::endl;
+	std::cout << "* b - Imprimir por pantalla un texto              *" << std::endl;
+	std::cout << "***************************************************" << std::endl;
+	std::cout << "Opcion: ";
 }
 
 __callback void OptStr() {
-	cout << "***************************************************" << endl;
-	cout << "* a - Camparacion de cadena                       *" << endl;
-	cout << "***************************************************" << endl;
-	cout << "Opcion: ";
+	std::cout << "***************************************************" << std::endl;
+	std::cout << "* a - Camparacion de cadena                       *" << std::endl;
+	std::cout << "***************************************************" << std::endl;
+	std::cout << "Opcion: ";
 }
 
 __callback void OptBin() {
-	cout << "***************************************************" << endl;
-	cout << "* Selecciona una opcion y presiona enter:         *" << endl;
-	cout << "* a - AND binario                                 *" << endl;
-	cout << "* b - OR binario                                  *" << endl;
-	cout << "* c - Desplazamiento de 2 bits a la izquierda     *" << endl;
-	cout << "* d - Desplazamiento de 2 bits a la derecha       *" << endl;
-	cout << "***************************************************" << endl;
-	cout << "Opcion: ";
+	std::cout << "***************************************************" << std::endl;
+	std::cout << "* Selecciona una opcion y presiona enter:         *" << std::endl;
+	std::cout << "* a - AND binario                                 *" << std::endl;
+	std::cout << "* b - OR binario                                  *" << std::endl;
+	std::cout << "* c - Desplazamiento de 2 bits a la izquierda     *" << std::endl;
+	std::cout << "* d - Desplazamiento de 2 bits a la derecha       *" << std::endl;
+	std::cout << "***************************************************" << std::endl;
+	std::cout << "Opcion: ";
 }
 
 
 __callback void OptLgl() {
-	cout << "***************************************************" << endl;
-	cout << "* a - intercambio de variables                    *" << endl;
-	cout << "***************************************************" << endl;
-	cout << "Opcion: ";
+	std::cout << "***************************************************" << std::endl;
+	std::cout << "* a - intercambio de variables                    *" << std::endl;
+	std::cout << "***************************************************" << std::endl;
+	std::cout << "Opcion: ";
 }

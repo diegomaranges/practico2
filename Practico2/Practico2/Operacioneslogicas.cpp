@@ -2,9 +2,9 @@
 #include "Operacioneslogicas.h"
 
 #include <string>
-#define show(var1, var2 ) std::cout << #var1 << ": " << (var1) << " ; " << #var2 << ": " << (var2) << std::endl
 
+// swap value of two pointers to strings
 void my_swap(std::string *n1, std::string *n2)
 {
-	(*n1).swap(*n2);
+	(*n1).swap(*n2); // Operation of string class.
 }

@@ -8,6 +8,7 @@ using namespace std;
 void MenuOpt::menu(callback_function funct)
 {
 	if (funct == nullptr) {
+		//Default menu in this proyect.
 		cout << "***************************************************" << endl;
 		cout << "* Selecciona una opcion y presiona enter:         *" << endl;
 		cout << "* a - Operaciones matematicas                     *" << endl;
@@ -32,7 +33,7 @@ char MenuOpt::options()
 		cin.ignore(999, '\n');
 		cout << "Invalid data type! Please enter 'option' again";
 	}
-	cin.ignore(999, '\n');
+	cin.ignore(999, '\n'); // Clean entry buffer.
 	return option_in;
 }
 
@@ -41,7 +42,7 @@ int MenuOpt::optionsFun(std::string comment)
 	int a;
 	cout << comment;
 	cin >> a;
-	cin.ignore(999, '\n');
+	cin.ignore(999, '\n'); // Clean entry buffer.
 	return a;
 }
 
@@ -50,15 +51,17 @@ string MenuOpt::optionsFunct(std::string comment)
 	string a;
 	cout << comment;
 	cin >> a;
-	cin.ignore(999, '\n');
+	cin.ignore(999, '\n'); // Clean entry buffer.
 	return a;
 }
 
 MenuOpt::MenuOpt()
 {
+	// Not contain variables to assing init value.
 }
 
 
 MenuOpt::~MenuOpt()
 {
+	// Not contain variables to free memory.
 }

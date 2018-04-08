@@ -4,8 +4,10 @@
 #include <random>
 #include <chrono>
 
+//concatenate variables.
 #define concatenate(var1, var2) std::cout << #var1 << #var2 << std::endl
 
+//possible values of literals.
 #define result1 "La felicidad no se consigue sentandose a esperarla."
 #define result2 "Un hombre que nunca cometio errores, nunca hizo nada."
 #define result3 "No es mas limpio el que mas limpia, sino el que menos ensucia."

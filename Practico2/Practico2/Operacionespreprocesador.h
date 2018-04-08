@@ -4,9 +4,11 @@
 using namespace std;
 
 void console_print();
-//Print from console a text
+//Print from console a literal text.
+//This function can return five differents text, using funtion random.
 
 void chain(string str1, string str2);
-//Concatenate two name of variable
+//Take two strings.
+//Concatenate both name of variable
 
 
