@@ -105,8 +105,15 @@ m, n, o    | M, N, O    | 6
 p, q, r, s | P, Q, R, S | 7
 t, u, v    | T, U, V    | 8
 w, x, y, z | W, x, Y, Z | 9
+otherwise  |            | 1
 
-otherwise | 1
+But for not use one if and else very big, I used arithmetic of bits. The variables type `char` they can only take on 26 posible values ( a, ... ,z).
+
+I created the truth table for each bit. this tables is in the directory **quinemccluskey**, the FirstBit file represent truth table of first bit of the integer on value column in the table, SecondBit file represent second bit, ThirdBit file represent third bit and FourthBit file represent forth bit.
+
+The algorithm McCluskey return minimal possible expression in arithmetic of bits such that truth table is fulfilled.
+
+And finaly by save command and word, I used [multimap](http://www.cplusplus.com/reference/map/multimap/ "multimap cplusplus").
 
 ## Bibliography ##
 1. [stackoverflow](https://es.stackoverflow.com/ "stackoverflow").
