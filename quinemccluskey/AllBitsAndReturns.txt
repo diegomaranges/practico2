@@ -1,5 +1,7 @@
-5
-26
+5 bits input
+26 possible values
+4 bits output
+  ABCDE
 a 00001 = 2 \
 b 00010 = 2 = 0010
 c 00011 = 2 /
@@ -27,6 +29,8 @@ x 11000 = 9 = 1001
 y 11001 = 9 /
 z 11010 = 9 /
 
+=============================================================================
+
 run first bit: F = A'B'CD' + A'B'CE' + A'BC'D + A'CD'E' + AB'DE + AC'D' + AC'E'
 
 run Second bit: F = AB'C' + A'B'D'E + A'B'DE' + A'BCE + A'B'CD' + A'CDE' + B'C'E
@@ -34,3 +38,11 @@ run Second bit: F = AB'C' + A'B'D'E + A'B'DE' + A'BCE + A'B'CD' + A'CDE' + B'C'E
 run Third bit: F = A'CDE + A'B + AB'C'
 
 run Fourth bit: F = AB'C + ABC'D' + ABC'E'
+
+============================================================================
+
+AB = A . B = A and B = {A & B}
+
+A' = not {B = !B}
+
+A+B = A or B = {A | B}

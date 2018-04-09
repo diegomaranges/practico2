@@ -15,11 +15,11 @@ In this directory implement some basic operations and the use of **Macros** (Def
 
 3. **AllMenu.h:** This file have al menu that are not default menu. the elements in this header can be called by MenuOpt.h using **callback**.
 
-4. **OperacionesBinarias.h and OperacionesBinarias.cpp:** so as not to overload the main function, can call `SwitchOB(char)` by select binary operation. `and_bin()` does binary and enter two integers. `or_bin()` does binary or enter two integers. `sleft()` binary shift left for two bits on integer. `srigth()` binary shift rigth for two bits on integer.
+4. **OperacionesBinarias.h and OperacionesBinarias.cpp:** so as not to overload the main function, can call `SwitchOB(char)` by select binary operation. `and_bin()` does binary and between two integers. `or_bin()` does binary or between two integers. `sleft()` binary shift left for two bits on integer. `srigth()` binary shift rigth for two bits on integer.
 
 5. **OperacionesLogicas.h and OperacionesLogicas.cpp:** take two values insert by user for cosole and swap the value. the value entry is take with string by user can any value.
 
-6. **OperacionesMatematicas.h and OperacionesMatematicas.cpp:** so as not to overload the main function, can call `SwitchOM(char)` by select binary operation. `cal_square()` calculate square on one number. `cal_addition()` calculate addition enter two numbers. `circle_area()` take radius entered by user and using variable *PI* defined using macros, calculate circle area. `maximal()` take two integers and return the maximum of both.
+6. **OperacionesMatematicas.h and OperacionesMatematicas.cpp:** so as not to overload the main function, can call `SwitchOM(char)` by select binary operation. `cal_square()` calculate square on one number. `cal_addition()` calculate addition between two numbers. `circle_area()` take radius entered by user and using variable *PI* defined using macros, calculate circle area. `maximal()` take two integers and return the maximum of both.
 
 7. **OperacionesPreprocesador.h and OperacionesPreprocesador.cpp:** `console_print()` this function print [literal](https://en.wikipedia.org/wiki/Literal_(computer_programming) "Literal(computer_programming)") from comsole. `chain()` take two value and concatenate variable name for both value.
 
