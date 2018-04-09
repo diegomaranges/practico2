@@ -91,6 +91,22 @@ In this directory implement function `swap()` that take two elements of the same
 4. **Node.h and Node.cpp:** This files contain a `class LinkedList` that use various public functions, `getElem()`, `getNextElem()`, `getPrevElem()`(the three function retorn value of node), `setNextElem()`, `setPrevElem()`(the two function take Node * and update value of node characteristics, but not node value). Also contain the three private value and variables of node, `element`(value of node, in this case integer), `nextt`(pointer to next node), and `prev`(pointer to previus node).
 
 ## CommandLineApp ##
+In this directory implement function to charge words of file and pass them to integers. Also implement function to search all values insert by user that coincide to integer(words).
+
+The characters value equivalent they are:
+
+Character  |            | value
+---------- | ---------- | --------
+a, b, c    | A, B, C    | 2
+d, e, f    | D, E, F    | 3
+g, h, i    | G, H, I    | 4
+j, k, l    | J, K, L,   | 5
+m, n, o    | M, N, O    | 6
+p, q, r, s | P, Q, R, S | 7
+t, u, v    | T, U, V    | 8
+w, x, y, z | W, x, Y, Z | 9
+
+otherwise | 1
 
 ## Bibliography ##
 1. [stackoverflow](https://es.stackoverflow.com/ "stackoverflow").
