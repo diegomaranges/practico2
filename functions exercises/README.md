@@ -103,22 +103,44 @@ Write a sort() function that takes a pointer of ints and its size, and sort them
 ### answer8 ###
 	#include <stdlib.h> 
 	__callback int mymax(const void * a, const void * b) {
-	return *(int*)a - *(int*)b;
+		return *(int*)a - *(int*)b;
 	}
-	int *shor(int *a, int length) {
-	qsort(a, length, sizeof(int), mymax
+
+	int *sort(int *a, int length) {
+		qsort(a, length, sizeof(int), mymax);
 	}
 
 ## ask9 ##
 Create a function that takes an argument by value as a const; then try to change that argument in the function body.
 
 ### answer9 ###
-	fun()
+	void fun(const int a) {
+		a = 10;
+		cout<<a;
+	}
+but i cant change constant value. This function will return error.
 
 ## ask10 ##
 Define a function that takes a double argument and returns an int . Create and initialize a pointer to this function, and call the function through your pointer.
 
 ### answer10 ###
+
+	__callback int funct(double);
+	
+	int callfunct(int(*f)(double)) {
+	    int a;
+	    a = f(2.0);
+	    return a;
+	}
+	
+	int main() {
+	    cout << callfunct(funct) << endl;
+	    system("pause");
+	}
+	
+	int funct(double) {
+	    return 10;
+	}
 
 ## ask11 ##
 Declare a pointer to a function taking an int argument and returning a pointer to a function that takes a char argument and returns a float .
