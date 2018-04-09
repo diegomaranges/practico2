@@ -146,3 +146,16 @@ Define a function that takes a double argument and returns an int . Create and i
 Declare a pointer to a function taking an int argument and returning a pointer to a function that takes a char argument and returns a float .
 
 ### answer11 ###
+	typedef float(*val)(char);
+
+	__callback float funct2(char) {
+	    return 1.0;
+	}
+	
+	__callback val funct1(int) {
+	    return funct2;
+	}
+
+	int main() {
+    	cout << funct1(2)('a') << endl;
+	}
