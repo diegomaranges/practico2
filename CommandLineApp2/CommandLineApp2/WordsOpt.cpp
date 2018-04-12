@@ -12,14 +12,9 @@ using namespace std;
 #define DIRECTION "C:\\Users\\Diego\\Documents\\practico2\\CommandLineApp\\CommandLineApp\\words.txt"
 
 
-string WordsOpt::charToCode(char mychar)
+string WordsOpt::charToCode(char mychar, int *arr)
 {
 	int value = (int)mychar; // Number representation of mychar.
-	int A = 0; // using by represent fifth bit of value.
-	int B = 0; // using by represent fourth bit of value.
-	int C = 0; // using by represent third bit of value.
-	int D = 0; // using by represent second bit of value.
-	int E = 0; // using by represent first bit of value.
 	int returnV = 0; // Number representation of mychar from number keyboard.
 
 	if (value == 0x20) // mychar = space.
@@ -41,34 +36,18 @@ string WordsOpt::charToCode(char mychar)
 		{
 			value -= 0x60;
 		}
-		// value its from 1 to 26 therefore I alone need 5 bits in my true table.
-		E = value & 1;
-		D = (value & 2) >> 1;
-		C = (value & 4) >> 2;
-		B = (value & 8) >> 3;
-		A = (value & 16) >> 4;
-
-		//with only need 4 bits for represent one number from 0 to 9, create true table and run McCluskey algorithm.
-		returnV = (!A & !B & C & !D) | (!A & !B & C & !E) | (!A & B & !C & D) | (!A & C & !D & !E)
-			| (A & !B & D & E) | (A & !C & !D) | (A & !C & !E); // First bit
-
-		returnV |= ((A & !B & !C) | (!A & !B & !D & E) | (!A & !B & D & !E) | (!A & B & C & E)
-			| (!A & !B & C & !D) | (!A & C & D & !E) | (!B & !C & E)) << 1; // Second bit.
-
-		returnV |= ((!A & C & D & E) | (!A & B) | A & !B & !C) << 2; // Third bit.
-
-		returnV |= ((A & !B & C) | (A & B & !C & !D) | (A & B * !C & !E)) << 3; // Tourth bit.
+        returnV = arr[value]; // value of char in command number.
 	}
 	return to_string(returnV); // return returnV passed to string.
 };
 
-string WordsOpt::stringToChar(string word, size_t length)
+string WordsOpt::stringToChar(string word, size_t length, int *arr)
 {
 	// decompose string in char and call charToCode.
 	string key = "";
 	for (int i = 0; i != length; ++i)
 	{
-		key = key + charToCode(word[i]);
+		key = key + charToCode(word[i], arr);
 	}
 	return key;
 }
@@ -78,13 +57,44 @@ WordsOpt::WordsOpt()
 	string key = ""; // Using by contain comman formed by pass line to command.
 	string line; // Using by read line to line of file.
 	ifstream myfile(DIRECTION); //Open file.
+    int *arr = new int[27]; //array of int for value of char, this array contain 27 element that go
+                            //position from 0 to 26.
+    // initialization of array.
+    arr[0] = 0; // this value never should access.
+    for (int i = 1; i < 27; ++i) {
+        if (i < 4) {
+            arr[i] = 2; // 1 to 3 position represent a, b, c.
+        }
+        else if (i < 7) {
+            arr[i] = 3; // 4 to 6 position represent a, b, c.
+        }
+        else if (i < 10) {
+            arr[i] = 4; // 7 to 9 position represent a, b, c.
+        }
+        else if (i < 13) {
+            arr[i] = 5; // 10 to 12 position represent a, b, c.
+        }
+        else if (i < 16) {
+            arr[i] = 6; // 13 to 15 position represent a, b, c.
+        }
+        else if (i < 20) {
+            arr[i] = 7; // 16 to 19 position represent a, b, c.
+        }
+        else if (i < 23) {
+            arr[i] = 8; // 20 to 22 position represent a, b, c.
+        }
+        else {
+            arr[i] = 9; // 23 to 26 position represent a, b, c.
+        }
+    }
+
 	if (myfile.is_open())
 	{
 		// Go through all alements of file.
 		while (getline(myfile, line))
 		{
 			// Pass to comand, add element to multimap and clean string key.
-			key = stringToChar(line, line.size());
+			key = stringToChar(line, line.size(), arr);
 			mult.insert(pair<string, string>(key, line));
 			key = "";
 		}
@@ -96,6 +106,7 @@ WordsOpt::WordsOpt()
 	}
 	else
 		cout << "Unable to open file";
+    delete arr;
 };
 
 void WordsOpt::serchComand(string command)
