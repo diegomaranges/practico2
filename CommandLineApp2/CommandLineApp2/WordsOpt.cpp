@@ -26,12 +26,12 @@ string WordsOpt::charToCode(char mychar)
 	{
 		return "0";
 	}
-    // mychar = number or punctuation sign.
+	// mychar = number or punctuation sign.
 	else if (0x21 <= value && value <= 0x40 || 0x5b <= value && value <= 0x60 || value == 0x7e)
 	{
 		return "1";
 	}
-	else 
+	else
 	{
 		if (value < 91) // if mychar its majuscule char.
 		{
@@ -41,14 +41,14 @@ string WordsOpt::charToCode(char mychar)
 		{
 			value -= 0x60;
 		}
-        // value its from 1 to 26 therefore I alone need 5 bits in my true table.
+		// value its from 1 to 26 therefore I alone need 5 bits in my true table.
 		E = value & 1;
 		D = (value & 2) >> 1;
 		C = (value & 4) >> 2;
 		B = (value & 8) >> 3;
 		A = (value & 16) >> 4;
 
-        //with only need 4 bits for represent one number from 0 to 9, create true table and run McCluskey algorithm.
+		//with only need 4 bits for represent one number from 0 to 9, create true table and run McCluskey algorithm.
 		returnV = (!A & !B & C & !D) | (!A & !B & C & !E) | (!A & B & !C & D) | (!A & C & !D & !E)
 			| (A & !B & D & E) | (A & !C & !D) | (A & !C & !E); // First bit
 
@@ -57,14 +57,14 @@ string WordsOpt::charToCode(char mychar)
 
 		returnV |= ((!A & C & D & E) | (!A & B) | A & !B & !C) << 2; // Third bit.
 
-		returnV |= ((A & !B & C) | (A & B & !C & !D) | (A & B *!C & !E)) << 3; // Tourth bit.
+		returnV |= ((A & !B & C) | (A & B & !C & !D) | (A & B * !C & !E)) << 3; // Tourth bit.
 	}
 	return to_string(returnV); // return returnV passed to string.
 };
 
 string WordsOpt::stringToChar(string word, size_t length)
 {
-    // decompose string in char and call charToCode.
+	// decompose string in char and call charToCode.
 	string key = "";
 	for (int i = 0; i != length; ++i)
 	{
@@ -80,17 +80,17 @@ WordsOpt::WordsOpt()
 	ifstream myfile(DIRECTION); //Open file.
 	if (myfile.is_open())
 	{
-        // Go through all alements of file.
+		// Go through all alements of file.
 		while (getline(myfile, line))
 		{
-            // Pass to comand, add element to multimap and clean string key.
+			// Pass to comand, add element to multimap and clean string key.
 			key = stringToChar(line, line.size());
 			mult.insert(pair<string, string>(key, line));
 			key = "";
 		}
 		myfile.close();
 		cout << "Elements in m: " << endl;
-        // Print all values of my multimap
+		// Print all values of my multimap
 		for (multimap<string, string>::iterator it = mult.begin(); it != mult.end(); ++it)
 			cout << "  [" << (*it).first << ", " << (*it).second << "]" << endl;
 	}
@@ -102,7 +102,7 @@ void WordsOpt::serchComand(string command)
 {
 	cout << "estos son los elementos que coinciden con el comando" << endl;
 	multimap<string, string>::iterator it, itlow, itup;
-    //serch all key with equal key as command.
+	//serch all key with equal key as command.
 	itlow = mult.lower_bound(command);  // example from http://www.cplusplus.com/reference/map/multimap/lower_bound/
 	itup = mult.upper_bound(command);
 	for (it = itlow; it != itup; ++it) {
@@ -115,3 +115,4 @@ WordsOpt::~WordsOpt()
 {
 
 }
+
