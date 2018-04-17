@@ -1,5 +1,5 @@
 # Introduction #
-Proyect done by Diego Maranges, March - April 2018.
+Proyect done by Diego Maranges, March - May 2018.
 
 This project is by acquire multiples knowledge about c++.
 Each directory consist in diferent types of element belongs c++.
@@ -13,13 +13,13 @@ In this directory implement some basic operations and the use of **Macros** (Def
 
 2. **MenuOpt.h and MenuOpt.cpp:** This files contain a class who is in charge to print diferent menus. Also is charge to recive and return entry value.
 
-3. **AllMenu.h:** This file have al menu that are not default menu. the elements in this header can be called by MenuOpt.h using **callback**.
+3. **AllMenu.h:** This file has all menu that are not default menu. the elements in this header can be called by MenuOpt.h using **callback**.
 
 4. **OperacionesBinarias.h and OperacionesBinarias.cpp:** so as not to overload the main function, can call `SwitchOB(char)` by select binary operation. `and_bin()` does binary and between two integers. `or_bin()` does binary or between two integers. `sleft()` binary shift left for two bits on integer. `srigth()` binary shift rigth for two bits on integer.
 
-5. **OperacionesLogicas.h and OperacionesLogicas.cpp:** take two values insert by user for cosole and swap the value. the value entry is take with string by user can any value.
+5. **OperacionesLogicas.h and OperacionesLogicas.cpp:** Take two values insert by user for cosole and swap the value. the value entry is take with string by user can any value.
 
-6. **OperacionesMatematicas.h and OperacionesMatematicas.cpp:** so as not to overload the main function, can call `SwitchOM(char)` by select binary operation. `cal_square()` calculate square on one number. `cal_addition()` calculate addition between two numbers. `circle_area()` take radius entered by user and using variable *PI* defined using macros, calculate circle area. `maximal()` take two integers and return the maximum of both.
+6. **OperacionesMatematicas.h and OperacionesMatematicas.cpp:** So as not to overload the main function, can call `SwitchOM(char)` by select binary operation. `cal_square()` calculate square on one number. `cal_addition()` calculate addition between two numbers. `circle_area()` take radius entered by user and using variable *PI* defined using macros, calculate circle area. `maximal()` take two integers and return the maximum of both.
 
 7. **OperacionesPreprocesador.h and OperacionesPreprocesador.cpp:** `console_print()` this function print [literal](https://en.wikipedia.org/wiki/Literal_(computer_programming) "Literal(computer_programming)") from comsole. `chain()` take two value and concatenate variable name for both value.
 
@@ -30,11 +30,11 @@ In this directory implement array in *stack memory* and function to print max  a
 
 1. **Practico3.cpp:** This file contain main function, where print menu, analyze entry values, call to diferent functions and initialize array in stak.
 
-2. **MenuOpt.h, MenuOpt.cpp and AllMenu.cpp:** this files they fulfill the same function that in *practico2*.
+2. **MenuOpt.h, MenuOpt.cpp and AllMenu.cpp:** This files they fulfill the same function that in *practico2*.
 
-3. **ArrayStack.h and ArrayStack.cpp:** this files contain function `Array_Stack()` that fulfill two functions, update value of array using one statik value by mark current value or print by console the array.
+3. **ArrayStack.h and ArrayStack.cpp:** This files contain function `Array_Stack()` that fulfill two functions, update value of array using one statik value by mark current value or print by console the array.
 
-4. **SizeofPrint.h and SizeofPrint.cpp:** this files contain function `Print_sizeof()` that fulfill four functions but all consist of print something by console using library **limits**. First possible maximal value of different types, second possible minimal value of different types, third sizeof value of differents types and fourth three values of diferent shapes(`int a = 0xFFFFFFFF`,`unsigned int b = 0xFFFFFFFF` and `char c = 65`).
+4. **SizeofPrint.h and SizeofPrint.cpp:** This files contain function `Print_sizeof()` that fulfill four functions but all consist of print something by console using library **limits**. First possible maximal value of different types, second possible minimal value of different types, third sizeof value of differents types and fourth three values of diferent shapes(`int a = 0xFFFFFFFF`,`unsigned int b = 0xFFFFFFFF` and `char c = 65`).
 
 ### If your architecture It's 32 bits then return: ###
 > maximal value:
@@ -95,7 +95,7 @@ In this directory implement function to charge words of file and pass them to in
 
 The characters value equivalent they are:
 
-Character  |            | value
+Character  |            | Value
 ---------- | ---------- | --------
 a, b, c    | A, B, C    | 2
 d, e, f    | D, E, F    | 3
@@ -107,13 +107,46 @@ t, u, v    | T, U, V    | 8
 w, x, y, z | W, x, Y, Z | 9
 otherwise  |            | 1
 
-But for not use one if and else very big, I used arithmetic of bits. The variables type `char` they can only take on 26 posible values ( a, ... ,z).
+But for not use one if and else very big, used arithmetic of bits. The variables type `char` they can only take on 26 posible values ( a, ... ,z).
 
-I created the truth table for each bit. this tables is in the directory **quinemccluskey**, the FirstBit file represent truth table of first bit of the integer on value column in the table, SecondBit file represent second bit, ThirdBit file represent third bit and FourthBit file represent forth bit.
+It was created the truth table for each bit. This tables is in the directory **quinemccluskey**, the FirstBit file represent truth table of first bit of the integer on value column in the table, SecondBit file represent second bit, ThirdBit file represent third bit and FourthBit file represent forth bit.
 
 The algorithm McCluskey return minimal possible expression in arithmetic of bits such that truth table is fulfilled.
 
-And finaly by save command and word, I used [multimap](http://www.cplusplus.com/reference/map/multimap/ "multimap cplusplus").
+And finaly by save command and word, this function used [multimap](http://www.cplusplus.com/reference/map/multimap/ "multimap cplusplus"). it multimap is load in the creator of WordsOpt class.
+
+## CommandLineApp2 ##
+In this directory implement another method of command line app previus. Switch the arithmetic of bit for array of integers. Representing all alphabet letters by numbers:
+
+Character  |Value       |Character | Value
+---------- |:----------:| -------- |:--------:
+a, A       | 1          |b, B      | 2
+c, C       | 3          |d, D      | 4
+e, E       | 5          |f, F      | 6
+g, G       | 7          |h, H      | 8
+i, I       | 9          |j, J      | 10
+k, K       | 11         |l, L      | 12
+m, M       | 13         |n, N      | 14
+o, O       | 15         |p, P      | 16
+q, Q       | 17         |r,R       | 18
+s,S        | 19         |t, T      | 20
+u, U       | 21         |v, V      | 22
+w, W       | 23         |x, X      | 24
+y, Y       | 25         |z, Z      | 26
+
+This array is created in the heap when call constructor to WordsOpt class and the values of return in the 26 positions is:
+
+Position in   | Value
+array         |
+ :----------: | :--------:
+1, 2, 3       | 2
+4, 5, 6       | 3
+7, 8, 9       | 4
+10, 11, 12    | 5
+13, 14, 15    | 6
+16, 17, 18, 19| 7
+20, 21, 22    | 8
+23, 24, 25, 26| 9
 
 ## Bibliography ##
 1. [stackoverflow](https://es.stackoverflow.com/ "stackoverflow").
