@@ -151,3 +151,4 @@ Position in array | Value
 1. [stackoverflow](https://es.stackoverflow.com/ "stackoverflow").
 2. [cplusplus](http://www.cplusplus.com/doc/tutorial/ "cplusplus tutorial").
 3. material provided by [globant enterprise](https://www.facebook.com/Globant/ "Globant").
+4. [desing pattern](https://en.wikipedia.org/wiki/Software_design_pattern "Software_design_pattern")
