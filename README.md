@@ -136,17 +136,16 @@ y, Y       | 25         |z, Z      | 26
 
 This array is created in the heap when call constructor to WordsOpt class and the values of return in the 26 positions is:
 
-Position in   | Value
-array         |
- :----------: | :--------:
-1, 2, 3       | 2
-4, 5, 6       | 3
-7, 8, 9       | 4
-10, 11, 12    | 5
-13, 14, 15    | 6
-16, 17, 18, 19| 7
-20, 21, 22    | 8
-23, 24, 25, 26| 9
+Position in array | Value
+ :--------------: | :--------:
+1, 2, 3           | 2
+4, 5, 6           | 3
+7, 8, 9           | 4
+10, 11, 12        | 5
+13, 14, 15        | 6
+16, 17, 18, 19    | 7
+20, 21, 22        | 8
+23, 24, 25, 26    | 9
 
 ## Bibliography ##
 1. [stackoverflow](https://es.stackoverflow.com/ "stackoverflow").
