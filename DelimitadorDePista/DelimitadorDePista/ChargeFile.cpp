@@ -7,7 +7,9 @@
 #include <algorithm>
 #include <assert.h>
 
+//direction of input file.
 #define DirectionIn "C:\\Users\\Diego\\Documents\\practico2\\DelimitadorDePista\\DelimitadorDePista\\PistaIn.txt"
+//direction of output file.
 #define DirectionOut "C:\\Users\\Diego\\Documents\\practico2\\DelimitadorDePista\\DelimitadorDePista\\PistaOut.txt"
 
 using std::stringstream;
