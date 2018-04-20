@@ -27,9 +27,9 @@ namespace cpp_math {
         Point getAddition(const Point& p);
         //Return this Point with addition of p and this.
         const Point& add(const Point& p);
-        //Return new Point with substract of p and this.
+        //Return new Point with subtraction of p and this.
         Point getSubtract(const Point& p);
-        //Return this Point with substract of p and this.
+        //Return this Point with subtraction of p and this.
         const Point& subtract(const Point& p);
         //calculate distance from this Point to p Point.
         float distance(const Point& p);
