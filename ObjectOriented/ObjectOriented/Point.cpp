@@ -10,8 +10,8 @@ private:
 public:
     Point();
     Point(float, float, float);
-    Point(Point *);
-    Point operator=(Point *);
+    Point(const Point *);
+    Point operator=(const Point *);
     float getX();
     float getY();
     float getZ();
@@ -39,12 +39,12 @@ Point::Point(float x, float y, float z) : mX(new float(x)), mY(new float(y)), mZ
 
 }
 
-Point::Point(Point *other) : mX(new float(*other->mX)), mY(new float(*other->mY)), mZ(new float(*other->mZ))
+Point::Point(const Point *other) : mX(new float(*other->mX)), mY(new float(*other->mY)), mZ(new float(*other->mZ))
 {
     
 }
 
-Point Point::operator=(Point *other)
+Point Point::operator=(const Point *other)
 {
     return Point(*other->mX, *other->mY, *other->mZ);
 }
