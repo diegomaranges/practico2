@@ -1,25 +1,36 @@
 #include "stdafx.h"
 #include "Point.h"
 
-namespace cpp_math {    
+#include <iostream>
+
+using std::cout;
+using std::endl;
+
+namespace cpp_math {
+
     Point::Point() : mX(new float(0)), mY(new float(0)), mZ(new float(0))
     {
 
     }
 
-    Point::Point(float x, float y, float z) : mX(new float(x)), mY(new float(y)), mZ(new float(z))
+    Point::Point(float x, float y, float z) : mX(new float(x)), mY(new float(y)),
+        mZ(new float(z))
     {
 
     }
 
-    Point::Point(const Point *other) : mX(new float(*other->mX)), mY(new float(*other->mY)), mZ(new float(*other->mZ))
+    Point::Point(const Point *other) : mX(new float(*other->mX)),
+        mY(new float(*other->mY)), mZ(new float(*other->mZ))
     {
-    
+
     }
 
     Point Point::operator=(const Point *other)
     {
-        return Point(*other->mX, *other->mY, *other->mZ);
+        *mX = *other->mX;
+        *mY = *other->mY;
+        *mZ = *other->mZ;
+        return this;
     }
 
     float Point::getX()
@@ -110,6 +121,7 @@ namespace cpp_math {
 
     Point::~Point()
     {
+        cout << mX << " " << mY << " " << mZ << endl;
         delete mX;
         mX = nullptr;
         delete mY;
