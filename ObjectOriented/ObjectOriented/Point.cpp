@@ -1,11 +1,6 @@
 #include "stdafx.h"
 #include "Point.h"
 
-#include <iostream>
-
-using std::cout;
-using std::endl;
-
 namespace cpp_math {
 
     Point::Point() : mX(new float(0)), mY(new float(0)), mZ(new float(0))
@@ -121,7 +116,6 @@ namespace cpp_math {
 
     Point::~Point()
     {
-        cout << mX << " " << mY << " " << mZ << endl;
         delete mX;
         mX = nullptr;
         delete mY;
