@@ -1,5 +1,8 @@
 #include "stdafx.h"
 #include "Point.h"
+#include "MathUtils.h"
+
+using namespace cpp_math_utils;
 
 namespace cpp_math {
 
@@ -111,6 +114,12 @@ namespace cpp_math {
         calculate += (*mY - *p.mY)*(*mY - *p.mY);
         calculate += (*mZ - *p.mZ)*(*mZ - *p.mZ);
         return calculate / calculate;
+    }
+
+    bool Point::ifEqualPoint(const Point &point)
+    {
+        return comparefloat(mX, point.mX) &&
+            comparefloat(mY, point.mY) && comparefloat(mZ, point.mZ);
     }
 
 

@@ -33,6 +33,8 @@ namespace cpp_math {
         const Point& subtract(const Point& p);
         //calculate distance from this Point to p Point.
         float distance(const Point& p);
+        //Return true if they are a equal points or false on the contrary.
+        bool ifEqualPoint(const Point&);
         //destructor.
         ~Point();
     };
